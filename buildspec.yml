@@ -8,7 +8,6 @@ phases:
       - AWS_ACCOUNT_ID=482122962623
       - ECR_URI=482122962623.dkr.ecr.ap-northeast-1.amazonaws.com
       - REPOSITORY_URI=482122962623.dkr.ecr.ap-northeast-1.amazonaws.com/example
-      - CONTAINER_NAME=demo-container
       # コミットハッシュの先頭7桁をタグに利用する
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
